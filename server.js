@@ -9,7 +9,9 @@ const app = express() // chamando o express para app
 mongoose.Promise = global.Promise
 mongoose.connect(
     //"mongodb://localhost:27017/nodepi", { useNewUrlParser: true, useUnifiedTopology: true  }
-    "mongodb://ds013951.mlab.com:13951/nodeapi"
+    "mongodb://localhost:27017/nodeapi",
+    { useUnifiedTopology: true },
+    { useNewUrlParser: true }
 ).then(() => {
     console.log('MongoDB Conectado!!!')
 }).catch((err) => {
@@ -35,4 +37,4 @@ app.get('/', (req, res) => {
     return res.send("Hello world")
 })
 
-app.listen(8080) // informando que o meu servidor irá estar na porta 3001
+app.listen(3001) // informando que o meu servidor irá estar na porta 3001

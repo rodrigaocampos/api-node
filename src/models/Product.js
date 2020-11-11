@@ -9,7 +9,7 @@ const ProductSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    urk: {
+    url: {
         type: String,
         required: true
     },
